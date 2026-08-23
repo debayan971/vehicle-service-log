@@ -1,0 +1,552 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  background: linear-gradient(
+    135deg,
+    #1d4ed8,
+    #2563eb,
+    #3b82f6
+  );
+
+  color: white;
+
+  padding: 28px 7%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  box-shadow: 0 5px 20px rgba(37, 99, 235, 0.25);
+}
+
+.header h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.header p {
+  color: #dbeafe;
+  font-size: 14px;
+}
+
+
+/* =========================
+   RECORD COUNT
+========================= */
+
+.record-count {
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  padding: 12px 22px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  backdrop-filter: blur(8px);
+}
+
+.record-count span {
+  display: block;
+
+  font-size: 25px;
+
+  font-weight: bold;
+}
+
+.record-count small {
+  font-size: 12px;
+  color: #dbeafe;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main-container {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 35px auto;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.form-card,
+.records-card {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 30px;
+
+  margin-bottom: 30px;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  font-size: 22px;
+
+  color: #0f172a;
+
+  margin-bottom: 5px;
+}
+
+.section-title p {
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+
+  color: #334155;
+}
+
+.input-group input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #2563eb;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.form-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.primary-btn,
+.cancel-btn {
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.primary-btn {
+  background: #2563eb;
+
+  color: white;
+
+  flex: 1;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.cancel-btn {
+  background: #e2e8f0;
+
+  color: #334155;
+
+  padding-left: 25px;
+
+  padding-right: 25px;
+}
+
+.cancel-btn:hover {
+  background: #cbd5e1;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+  background: #dbeafe;
+
+  color: #1d4ed8;
+
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 750px;
+}
+
+thead {
+  background: #f8fafc;
+}
+
+th {
+  text-align: left;
+
+  padding: 15px;
+
+  font-size: 13px;
+
+  color: #64748b;
+
+  border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+  padding: 16px 15px;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  font-size: 14px;
+
+  color: #475569;
+}
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+td strong {
+  color: #0f172a;
+}
+
+
+/* =========================
+   SERVICE BADGE
+========================= */
+
+.service-badge {
+  display: inline-block;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   COST
+========================= */
+
+.cost {
+  font-weight: 700;
+
+  color: #059669;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-buttons {
+  display: flex;
+
+  gap: 7px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+
+  padding: 8px 13px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.edit-btn {
+  background: #fef3c7;
+
+  color: #b45309;
+}
+
+.edit-btn:hover {
+  background: #fde68a;
+}
+
+.delete-btn {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+  text-align: center;
+
+  padding: 50px 20px;
+
+  color: #64748b;
+}
+
+.empty-icon {
+  font-size: 50px;
+
+  margin-bottom: 15px;
+}
+
+.empty-state h3 {
+  color: #334155;
+
+  margin-bottom: 8px;
+
+  font-size: 20px;
+}
+
+.empty-state p {
+  font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+
+  padding: 25px;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 25px 5%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .record-count {
+    width: 100%;
+  }
+
+  .main-container {
+    width: 94%;
+
+    margin-top: 25px;
+  }
+
+  .form-card,
+  .records-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    align-items: flex-start;
+
+    gap: 15px;
+
+    flex-direction: column;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 12px;
+  }
+
+  .main-container {
+    width: 95%;
+  }
+
+  .form-card,
+  .records-card {
+    padding: 16px;
+  }
+
+  .section-title h2 {
+    font-size: 19px;
+  }
+
+}
