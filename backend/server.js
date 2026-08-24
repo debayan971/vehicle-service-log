@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.json())
  app.use("/serviceRecords", require("./routes/ServiceRoutes"));
 //mongodb connection
-mongoose.connect("mongodb://127.0.0.1:27017/vehicleservicedb")
+mongoose.connect("mongodb://debayanmondal159_db_user:debayan123@ac-gn0tick-shard-00-00.uxb8ahb.mongodb.net:27017,ac-gn0tick-shard-00-01.uxb8ahb.mongodb.net:27017,ac-gn0tick-shard-00-02.uxb8ahb.mongodb.net:27017/vehicleservicedb?ssl=true&replicaSet=atlas-jp7ahw-shard-0&authSource=admin&appName=Cluster0")
 .then(()=>{
       console.log("MongoDB Connected");
 })
