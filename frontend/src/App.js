@@ -20,7 +20,7 @@ function App() {
   const fetchRecords = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/serviceRecords"
+        "https://vehicle-service-log-ibca.vercel.app/serviceRecords"
       );
 
       const data = await response.json();
@@ -56,7 +56,7 @@ function App() {
       if (editId) {
         // UPDATE
         const response = await fetch(
-          `http://localhost:5000/serviceRecords/${editId}`,
+          `https://vehicle-service-log-ibca.vercel.app/serviceRecords/${editId}`,
           {
             method: "PUT",
             headers: {
@@ -78,7 +78,7 @@ function App() {
       } else {
         // CREATE
         const response = await fetch(
-          "http://localhost:5000/serviceRecords",
+          "https://vehicle-service-log-ibca.vercel.app/serviceRecords",
           {
             method: "POST",
             headers: {
@@ -128,7 +128,7 @@ function App() {
 
     try {
       await fetch(
-        `http://localhost:5000/serviceRecords/${id}`,
+        `https://vehicle-service-log-ibca.vercel.app/serviceRecords/${id}`,
         {
           method: "DELETE"
         }
